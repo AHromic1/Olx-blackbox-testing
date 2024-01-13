@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace VVSTestOlx
+namespace VVSTestOlx.Core.Pages
 {
     public class HomePage
     {
