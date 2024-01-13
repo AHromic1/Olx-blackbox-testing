@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Amina\\Source\\Repos\\VVSTestOlx\\VVSTestOlx\\VVSTestOlx.csproj": {}
+    "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Amina\\Source\\Repos\\VVSTestOlx\\VVSTestOlx\\VVSTestOlx.csproj": {
+    "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Amina\\Source\\Repos\\VVSTestOlx\\VVSTestOlx\\VVSTestOlx.csproj",
+        "projectUniqueName": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
         "projectName": "VVSTestOlx",
-        "projectPath": "C:\\Users\\Amina\\Source\\Repos\\VVSTestOlx\\VVSTestOlx\\VVSTestOlx.csproj",
-        "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Amina\\Source\\Repos\\VVSTestOlx\\VVSTestOlx\\obj\\",
+        "projectPath": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "packagesPath": "C:\\Users\\mahmu\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\mahmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }
