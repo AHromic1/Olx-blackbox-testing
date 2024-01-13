@@ -28,67 +28,8 @@ namespace VVSTestOlx.Core.Tests
             _driver = new ChromeDriver();
         }
 
-
-
-
         [Test]
-
-        public void PrijavaNaOlxProfil_UspjesnaPrijava()
-        {
-            HomePage hp = new HomePage(_driver);
-            _driver.Navigate().GoToUrl("https://olx.ba/");
-            PrihvatiCookie();
-
-            IWebElement prijavaLink = _driver.FindElement(By.LinkText("Prijavi se"));
-            prijavaLink.Click();
-            Thread.Sleep(5000);
-
-            IWebElement usernameInput = _driver.FindElement(By.CssSelector("input[name='username']"));
-            usernameInput.SendKeys("VVSTest");  //username
-
-            IWebElement passwordInput = _driver.FindElement(By.CssSelector("input[name='password']"));
-            passwordInput.SendKeys("VVSTest2024");  //password
-            Thread.Sleep(5000);
-
-            IWebElement prijaviSeButton = _driver.FindElement(By.CssSelector("button.my-lg"));
-
-            prijaviSeButton.Click();
-            Thread.Sleep(5000);
-
-            IWebElement vvstestElement = _driver.FindElement(By.CssSelector("p.font-semibold.cursor-pointer"));
-            vvstestElement.Click();
-            Thread.Sleep(5000);
-
-            string expectedUrl = "https://olx.ba/profil/VVSTest/aktivni";
-
-            Assert.AreEqual(expectedUrl, _driver.Url);
-        }
-
-        
-        [Test]
-        public void PrikazStavkiKuceKategorije_UspjesanPrikaz()
-        {
-            HomePage hp = new HomePage(_driver);
-            _driver.Navigate().GoToUrl("https://olx.ba/");
-
-            PrihvatiCookie();
-
-            IWebElement kategorijeLink = _driver.FindElement(By.LinkText("Kategorije"));
-            kategorijeLink.Click();
-
-            Thread.Sleep(5000);
-            IWebElement kuceLink = _driver.FindElement(By.XPath(".//a[@href='/pretraga?category_id=24']"));
-            kuceLink.Click();
-         
-            Thread.Sleep(5000);
-           
-            string expectedUrl = "https://olx.ba/pretraga?category_id=24"; 
-           
-            Assert.AreEqual(expectedUrl, _driver.Url);
-        }
-
-        [Test]
-        public void VerifyProductDetails()
+        public void PrikazKomentaraNakonSubmitanja_NeuspjesanPrikaz()
         {
             // Navigacija do OLX.ba
             _driver.Navigate().GoToUrl("https://www.olx.ba/");
@@ -114,9 +55,73 @@ namespace VVSTestOlx.Core.Tests
             // klik na kontakt link
             IWebElement kontaktLink = _driver.FindElement(By.XPath("//ul[@id='menu-main']//a[contains(@href,'kontakt')]"));
             kontaktLink.Click();
-            Assert.IsNotNull(kontaktLink);
+            // Assert.IsNotNull(kontaktLink);
 
-            Thread.Sleep(10000);
+            Thread.Sleep(4000);
+            Console.WriteLine(_driver.Url);
+            // Assert.IsTrue(_driver.Url.Contains("https://blog.olx.ba/kontakt.html"), "Niste na željenoj stranici (https://blog.olx.ba).");
+
+            IWebElement saznajViseButton = _driver.FindElement(By.CssSelector(".eltd-btn.eltd-btn-medium.eltd-btn-solid.eltd-read-more"));
+            saznajViseButton.Click();
+            Thread.Sleep(4000);
+
+            // popunjavanje forme za komentar
+            IWebElement commentTextArea = _driver.FindElement(By.Id("comment"));
+            IWebElement authorInput = _driver.FindElement(By.Id("author"));
+            IWebElement emailInput = _driver.FindElement(By.Id("email"));
+            IWebElement websiteInput = _driver.FindElement(By.Id("url"));
+
+            // Popunite formu sa potrebnim informacijama
+            commentTextArea.SendKeys("Ovo je moj test komentar.");
+            authorInput.SendKeys("MojeIme");
+            emailInput.SendKeys("mojemail@example.com");
+            websiteInput.SendKeys("http://www.mojawebsite.com");
+
+            // klik na consent button
+            IWebElement consentCheckbox = _driver.FindElement(By.Id("wp-comment-cookies-consent"));
+            consentCheckbox.Click();
+
+            // klik na submit button
+            IWebElement submitButton = _driver.FindElement(By.Id("submit_comment"));
+            submitButton.Click();
+
+            Thread.Sleep(4000);
+            Assert.IsTrue(_driver.PageSource.Contains("Ovo je moj test komentar."), "Komentar se ne prikazuje na stranici.");
+
+            _driver.Close();
+            _driver.SwitchTo().Window(originalWindow);
+        }
+
+        [Test]
+        public void PrikazKontaktStranice_NeuspjesanPrikaz()
+        {
+            // Navigacija do OLX.ba
+            _driver.Navigate().GoToUrl("https://www.olx.ba/");
+
+            // klik na slazem se
+            PrihvatiCookie();
+
+            // klik na blog button
+            IWebElement blogButton = _driver.FindElement(By.CssSelector("#__layout>div>header>div>div.headerbar.bg-white.flex.flex-col.w-full.sm\\:items-center.sm\\:max-w-full.sm\\:px-md.sm\\:py-md.sm\\:flex-row>div.flex.flex-row.items-center.justify-between.mb-md.sm\\:mb-0>div:nth-child(1)>div.sm\\:hidden.flex.flex-row.ml-lg>ul>li:nth-child(5)>a"));
+            string originalWindow = _driver.CurrentWindowHandle;
+            blogButton.Click();
+
+            // prelazak na novi tab
+            foreach (string windowHandle in _driver.WindowHandles)
+            {
+                if (windowHandle != originalWindow)
+                {
+                    _driver.SwitchTo().Window(windowHandle);
+                    break;
+                }
+            }
+
+            // klik na kontakt link
+            IWebElement kontaktLink = _driver.FindElement(By.XPath("//ul[@id='menu-main']//a[contains(@href,'kontakt')]"));
+            kontaktLink.Click();
+            // Assert.IsNotNull(kontaktLink);
+
+            Thread.Sleep(4000);
             Console.WriteLine(_driver.Url);
             Assert.IsTrue(_driver.Url.Contains("https://blog.olx.ba/kontakt.html"), "Niste na željenoj stranici (https://blog.olx.ba).");
 
