@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
+    "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
   },
   "projects": {
-    "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
+    "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
         "projectName": "VVSTestOlx",
-        "projectPath": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
-        "packagesPath": "C:\\Users\\efend\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
+        "projectPath": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\efend\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -93,7 +93,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }

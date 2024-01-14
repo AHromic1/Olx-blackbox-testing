@@ -35,7 +35,7 @@ namespace VVSTestOlx.Core.Tests
                 Console.WriteLine("Ne postoji cookie.");
             }
         }
-
+        
         [Test]
         public void PrikazAutomobilaIzKategorijeVozila_UspjesanPrikaz()
         {
@@ -86,7 +86,7 @@ namespace VVSTestOlx.Core.Tests
             Assert.That(_driver.Url, Is.EqualTo(expectedUrl));
 
         }
-
+        
         [TearDown]
         public void Cleanup()
         {

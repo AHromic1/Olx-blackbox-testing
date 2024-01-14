@@ -27,7 +27,7 @@ namespace VVSTestOlx.Core.Tests
 
             _driver = new ChromeDriver();
         }
-
+        
         [Test]
         public void PrikazKomentaraNakonSubmitanja_NeuspjesanPrikaz()
         {

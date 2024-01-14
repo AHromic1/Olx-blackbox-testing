@@ -28,7 +28,7 @@ namespace VVSTestOlx.Core.Tests
             _driver = new ChromeDriver();
         }
 
-
+        
         [Test]
 
         public void PrijavaNaOlxProfil_UspjesnaPrijava()
@@ -84,7 +84,7 @@ namespace VVSTestOlx.Core.Tests
            
             Assert.AreEqual(expectedUrl, _driver.Url);
         }
-
+        
         private void PrihvatiCookie()
         {
             try
