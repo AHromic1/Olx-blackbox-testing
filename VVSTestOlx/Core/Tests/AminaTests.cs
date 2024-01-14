@@ -28,7 +28,7 @@ namespace VVSTestOlx.Core.Tests
             _driver = new ChromeDriver();
         }
 
-        
+
         [Test]
 
         public void PrijavaNaOlxProfil_UspjesnaPrijava()
@@ -62,7 +62,64 @@ namespace VVSTestOlx.Core.Tests
             Assert.AreEqual(expectedUrl, _driver.Url);
         }
 
-        
+        [Test]
+        public void PrijavaNaOlxProfil_NeuspjesnaPrijavaPogresanUsernameILozinka()
+        {
+            HomePage hp = new HomePage(_driver);
+            _driver.Navigate().GoToUrl("https://olx.ba/");
+            PrihvatiCookie();
+
+            IWebElement prijavaLink = _driver.FindElement(By.LinkText("Prijavi se"));
+            prijavaLink.Click();
+            Thread.Sleep(5000);
+
+            IWebElement usernameInput = _driver.FindElement(By.CssSelector("input[name='username']"));
+            usernameInput.SendKeys("VVSTestttt");  //username
+
+            IWebElement passwordInput = _driver.FindElement(By.CssSelector("input[name='password']"));
+            passwordInput.SendKeys("VVSTest2025");  //password
+            Thread.Sleep(5000);
+
+            IWebElement prijaviSeButton = _driver.FindElement(By.CssSelector("button.my-lg"));
+
+            prijaviSeButton.Click();
+            Thread.Sleep(5000);
+
+            string expectedUrl = "https://olx.ba/login";
+
+            Assert.AreEqual(expectedUrl, _driver.Url);
+        }
+
+        [Test]
+        public void PrijavaNaOlxProfil_NeuspjesnaPrijavaPogresanUsername()
+        {
+            HomePage hp = new HomePage(_driver);
+            _driver.Navigate().GoToUrl("https://olx.ba/");
+            PrihvatiCookie();
+
+            IWebElement prijavaLink = _driver.FindElement(By.LinkText("Prijavi se"));
+            prijavaLink.Click();
+            Thread.Sleep(5000);
+
+            IWebElement usernameInput = _driver.FindElement(By.CssSelector("input[name='username']"));
+            usernameInput.SendKeys("VVSTestttt");  //username
+
+            IWebElement passwordInput = _driver.FindElement(By.CssSelector("input[name='password']"));
+            passwordInput.SendKeys("VVSTest2024");  //password
+            Thread.Sleep(5000);
+
+            IWebElement prijaviSeButton = _driver.FindElement(By.CssSelector("button.my-lg"));
+
+            prijaviSeButton.Click();
+            Thread.Sleep(5000);
+
+            string expectedUrl = "https://olx.ba/login";
+
+            Assert.AreEqual(expectedUrl, _driver.Url);
+        }
+
+
+
         [Test]
         public void PrikazStavkiKuceKategorije_UspjesanPrikaz()
         {
@@ -77,14 +134,14 @@ namespace VVSTestOlx.Core.Tests
             Thread.Sleep(5000);
             IWebElement kuceLink = _driver.FindElement(By.XPath(".//a[@href='/pretraga?category_id=24']"));
             kuceLink.Click();
-         
+
             Thread.Sleep(5000);
-           
-            string expectedUrl = "https://olx.ba/pretraga?category_id=24"; 
-           
+
+            string expectedUrl = "https://olx.ba/pretraga?category_id=24";
+
             Assert.AreEqual(expectedUrl, _driver.Url);
         }
-        
+
         private void PrihvatiCookie()
         {
             try
@@ -101,7 +158,7 @@ namespace VVSTestOlx.Core.Tests
             }
         }
 
-       
+
         [TearDown]
         public void Cleanup()
         {

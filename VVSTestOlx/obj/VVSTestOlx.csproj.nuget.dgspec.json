@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
+    "C:\\Users\\Amina\\Source\\Repos\\AHromic1\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
+    "C:\\Users\\Amina\\Source\\Repos\\AHromic1\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "projectUniqueName": "C:\\Users\\Amina\\Source\\Repos\\AHromic1\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
         "projectName": "VVSTestOlx",
-        "projectPath": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
-        "packagesPath": "C:\\Users\\Korisnik\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Korisnik\\Desktop\\Tajra\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
+        "projectPath": "C:\\Users\\Amina\\Source\\Repos\\AHromic1\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "packagesPath": "C:\\Users\\Amina\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Amina\\Source\\Repos\\AHromic1\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Korisnik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Amina\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
