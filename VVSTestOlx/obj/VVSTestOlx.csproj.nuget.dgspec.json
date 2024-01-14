@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
+    "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
+    "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "projectUniqueName": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
         "projectName": "VVSTestOlx",
-        "projectPath": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
-        "packagesPath": "C:\\Users\\mahmu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mahmu\\Desktop\\VVS\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
+        "projectPath": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\VVSTestOlx.csproj",
+        "packagesPath": "C:\\Users\\efend\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\efend\\Olx-blackbox-testing\\VVSTestOlx\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\mahmu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\efend\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
