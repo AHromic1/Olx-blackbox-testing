@@ -1,19 +1,15 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
-trigger:
-- main
-
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'windows-latest'
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
+    powershell.exe -NoProfile -InputFormat None -ExecutionPolicy AllSigned -Command "[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://dl-cli.pstmn.io/install/win64.ps1'))"
+  displayName: 'Install Postman CLI'
+
+- task: CmdLine@2
+  displayName: 'Run automated API tests using Postman CLI'
+  inputs:
+    script: |
+        postman login --with-api-key PMAK-65a47850fda5f200383a4e70-abbb54010c1b55f1d36a17eda57a070143
+        # Run your collection using Postman CLI
+        postman collection run "28593149-bfce55f9-0455-4ab2-adce-741caad66a2d"
